@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='./css/base.css') }}"/>
+{% block cssPath %}{% endblock %}
+<title>Crown.com | {% block title %}{% endblock %}</title>
+</head>
+<body>
+<div class="container">
+	<nav class="navbar">
+		<span class="logo"><a href="{{ url_for('myWebsite.home') }}">CROWN</a></span>
+		<ul>
+			<li><a href="{{ url_for('myWebsite.home') }}">Home</a></li>
+			<li><a href="{{ url_for('myWebsite.contact') }}">Contact me</a></li>
+		</ul>
+	</nav>
+	<header class="header">
+	<div class="headerTextConatainer">
+		<h2>WELCOME TO THE<span>CROWN'S WORLD</span></h2>
+		<Button class="btn"> Explore &#8594</Button>
+	</div>
+	<div class="headerImageContainer"></div>
+	</header>
+	{% block body %}
+	{% endblock %}
+	<!--<footer class="footer">
+		<h2>Thankyou for visiting my site.</h2>
+		<h5> developed & managed by Crown.</h5>
+		<h6>&copy 2022-23 | All rights reserved to Harshit.</h6>
+	</footer>-->
+</div>
+</body>
+</html>

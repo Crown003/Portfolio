@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block cssPath %}<link rel="stylesheet" href="{{ url_for('static', filename='./css/index.css') }}"/>{% endblock %}
+{% block title %}
+{{ url_for("myWebsite.home") }}
+{% endblock %}
+{% block body %}
+<section class="indexPrimary">
+	<div class="indexHeading"><h2>ABOUT ME</h2></div>
+	<div class="aboutContainer">
+		<div class="aboutSection">
+			<p>NAME - <span>HARSHIT TIWARI (AKA CROWN)</span></p>
+			<p>AGE - <span>18</span></p>
+			<p>EDUCATION- 
+			<span>
+				<ul class="eduList">
+					<div>
+						<li class="listHead"><h2>12<sup>th</sup> Passed (year - 2023)</h2></li>
+						<li class="listSummary">School &#8594 <a href="#">Saraswati Vidya Mandir Sultanpur UP. </a></li>
+					</div>
+					<div>
+						<li class="listHead"><h2>10<sup>th</sup> Passed (year - 2021)</h2></li>
+						<li class="listSummary">School &#8594 <a href="#">Surya Academy Sn. Sec. Public School Sultanpur UP. </a></li>	
+					</div>
+				</ul>
+			</span>
+			</p>
+			<p class="pointList"> HOBBIES - <span >Exploring new Technologies.</span><span>Coding.</span><span>Reading Books.</span></p>
+			<p class="pointList">SKILLS - <span>WEB DEVLOPMENT</span><span>SOFTWARE DEVLOPMENT </span><span>GRAPHICS DESIGINING</span><span>VIDEO EDITING.</span></p>
+		</div>
+	</div>
+</section>
+<section class="myWorkContainer"></section>
+{% endblock %}

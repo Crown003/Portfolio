@@ -1,0 +1,128 @@
+:root{
+--white:#f2f2f2;
+--primaryBgColor: #020202; /* black */
+--primaryTextColor: #ffffff80; /*light white */
+--secondaryTextColor: #F5BD29;/*gold color*/
+--navBgColor: #ffffff40; /* dim white */
+--primaryFont: ###;
+--secondaryFont: ###;
+--headingFont:Arial Verdana;
+--paraFont:Popins Sans-sarif;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+.container{
+width:100vw;
+min-height:100vh;
+background:var(--primaryBgColor);
+}
+/* navigation bar styling */
+.navbar{
+background:var(--navBgColor);
+display:flex;
+width:100%;
+justify-content:space-between;
+position:fixed;
+top:0;
+}
+.logo{
+align-self:center;
+display:inline-block;
+margin-left:2em;
+}
+.logo a{
+text-decoration:none;
+color:var(--secondaryTextColor);
+}
+.navbar ul{
+align-self:flex-end;
+display:flex;
+gap:5rem;
+padding:.8em 1em;
+margin-right:2em;
+}
+.navbar ul li{
+list-style:none;
+}
+.navbar ul li a{
+text-decoration:none;
+color:var(--primaryBgColor);
+font-size:1em;
+position:relative;
+}
+.navbar ul li a::before{
+content:"";
+width:0px;
+height:.3em;
+border-radius:10px;
+background:var(--secondaryTextColor);
+position:absolute;
+top:100%;
+left:0;
+transition:.5s;
+}
+.navbar ul li a:hover{
+color:var(--secondaryTextColor);
+}
+.navbar ul li a:hover::before{
+width:100%;
+transform: translateX(0%);
+}
+/* header section styling*/
+.header{
+width:95%;
+margin:auto auto;
+height:25vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:var(--primaryTextColor);
+border-bottom:1px dashed var(--primaryTextColor);
+}
+.headerTextConatainer{
+width:40%;
+display:flex;
+padding:.5em;
+flex-direction:column;
+align-items:center;
+border:1px solid red;
+}
+.header h2{
+font-size:1.5em;
+font-weight:600;
+font-family:Open Sans;
+}
+.header h2 span{
+font-size:calc(1em + 20px);
+font-weight:800;
+display:block;
+color:var(--secondaryTextColor);
+}
+.header .btn{
+margin-top:.8em;
+cursor: pointer;
+background-color: transparent;
+height: 50px;
+width: 200px;
+color: var(--secondaryTextColor);
+border: 1px solid transparent;
+font-size: 1.5em;
+}
+.header .btn:hover{
+border: 1px solid var(--secondaryTextColor);
+}
+.headerImageContainer{
+height:85%;
+border:1px solid green;
+width:60%;
+background:url("../images/MyImage.png") no-repeat;
+background-position:center;
+background-size:130% 100%;
+}
+/* footer section styling */
+.footer{
+
+}

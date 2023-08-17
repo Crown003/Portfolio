@@ -1,0 +1,65 @@
+.indexPrimary{
+margin:auto auto;
+padding:.5em;
+position:relative;
+width:95%;
+}
+.indexHeading h2{
+font-size:1em;
+font-family:Arial;
+text-align:center;
+color:var(--primaryTextColor);
+}
+
+.indexHeading{
+padding:.5rem;
+}
+.aboutContainer{
+margin:.5em auto;
+padding:1rem;
+width:100%;
+border-left:2px solid var(--secondaryTextColor);
+border-radius:25px 0 25px 25px;
+background-color:Transparent;
+}
+.aboutSection{
+font-family:var(--paraFont);
+}
+.aboutSection p {
+font-size:.8em;
+font-weight:700;
+margin:.5em;
+color:var(--secondaryTextColor);
+}
+.aboutSection p span{
+color:var(--white);
+}
+.eduList{
+width:60%;
+text-align:center;
+margin:0 auto;
+}
+.eduList li {
+list-style:none;
+}
+.eduList li h2{
+font-size:2em;
+color:var(--white)
+}
+.eduList li a{
+text-decoration:none;
+font-size:1em;
+color:var(--primaryTextColor)
+}
+.listSummary{
+color:var(--secondaryTextColor);
+}
+.pointList  span{
+display:block;
+padding: 0 .5rem;
+}
+.pointList  span::before{
+content:"->  ";
+color:var(--secondaryTextColor);
+}
+/* my work section styling */
