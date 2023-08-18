@@ -36,11 +36,32 @@
 	</div>
 	
 	<div class="myWorkContainer">
+		{% for items in data.keys() %}
 		<div class="myWorkSection webdSection">
-			<div class="heading"><h2>WebDevlopment</h2></div>
+			<div class="heading"><h2>{{ items }}</h2></div>
 			<div class="content">
-			
+					{% for item in data[items].keys() %}
 				<div class="card">
+					<div class="cardImage">
+							<img  src= "{{ url_for('static', filename='./images/firstWeb.jpg') }} ">
+					</div>
+					<div class="cardDetails">
+						<h2>{{ data[items][item].Title }}</h2>
+						<p>Technologies used -> </p>
+						<div class="techLogo">
+								<img src="{{ url_for('static', filename='./images/html.png') }}" alt="htmlLogo">
+								<img src="{{ url_for('static', filename='./images/css.png') }}" alt="cssLogo">
+								<img src="{{ url_for('static', filename='./images/js.png') }}" alt="jsLogo">
+						</div>
+						<p>Links-></p>
+						<div class="linkLogo">
+							<a href="#" ><img src="{{ url_for('static', filename='./images/github.png') }}" alt="githublogo"></a>
+							<a href="#" ><img src="{{ url_for('static', filename='./images/live.png') }}" alt="Live View"></a>
+						</div>
+					</div>
+				</div>
+					{% endfor %}
+				<!--<div class="card">
 					<div class="cardImage">
 							<img  src="{{ url_for('static', filename='./images/firstWeb.jpg') }}">
 					</div>
@@ -98,11 +119,11 @@
 						</div>
 					</div>
 				</div>
-						
+				-->
 			</div>
 		</div>
-		
-		<div class="myWorkSection softwareSection">
+		{% endfor %}
+		<!--<div class="myWorkSection softwareSection">
 			<div class="heading"><h2>SoftwareDevlopment</h2></div>
 			<div class="content">
 					<div class="card">
@@ -221,7 +242,7 @@
 				
 			</div>
 		</div>
-		
+		-->
 		<div class="myWorkSection dataScienceSection">
 			<div class="heading"><h2>GraphicsDesigning</h2></div>
 			<div class="content">
@@ -242,6 +263,7 @@
 					</div>
 				</div>				
 			</div>
+			
 	</div>
 </div>
 </section>
