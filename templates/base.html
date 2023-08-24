@@ -8,20 +8,15 @@
 </head>
 <body>
 <div class="container">
-	<nav class="navbar">
+	<nav id="nav" class="navbar">
 		<span class="logo"><a href="{{ url_for('myWebsite.home') }}">CROWN</a></span>
 		<ul>
 			<li><a href="{{ url_for('myWebsite.home') }}">Home</a></li>
 			<li><a href="{{ url_for('myWebsite.contact') }}">Contact me</a></li>
+			<Button class="signbtn"><a href="{{ url_for('myWebsite.signin') }}">SignIn</a></Button>
 		</ul>
 	</nav>
-	<header class="header">
-	<div class="headerTextConatainer">
-		<h2>WELCOME TO THE<span>CROWN'S WORLD</span></h2>
-		<Button class="btn"> Explore &#8594</Button>
-	</div>
-	<div class="headerImageContainer"></div>
-	</header>
+	
 	{% block body %}
 	{% endblock %}
 	<!--<footer class="footer">

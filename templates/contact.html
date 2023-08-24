@@ -1,4 +1,34 @@
 {% extends "base.html" %}
 {% block cssPath %}<link rel="stylesheet" href="{{ url_for('static', filename='./css/contact.css') }}"/>{% endblock %}
 {% block title %}{{ url_for("myWebsite.contact") }} {% endblock %}
-{% block body %}<h2>hii this is contact</h2> {% endblock %}
+{% block body %}
+<div class="contactContainer">
+	<div class="contactHeading">
+		<h2>Contact Me</h2>
+	</div>
+	<div class="contactForm">
+		<form class="form" method="post" action="#">
+			{{ form.csrf_token }}
+			<div>
+				{{ form.name.label }}
+				<p class="input">{{ form.name() }}</p>
+			</div>
+			<div>
+				{{ form.email.label }}
+				<p class="input" >{{ form.email() }}</p>
+			</div>
+			<div>
+				{{ form.message.label }}
+				<p class="input" >{{ form.message() }}</p>
+			</div>
+			<div>
+				{{ form.needSomeService.label }}
+				<p class="input" >{{ form.needSomeService() }}</p>
+			</div>
+			<div>
+				<input type="submit" value="Submit"/>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}

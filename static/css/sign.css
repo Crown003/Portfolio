@@ -1,0 +1,70 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+.container{
+width:100vw;
+height:100vh;
+background:#000;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+h2{
+font-family:Arial Verdana;
+color:#ffffff80;
+font-size:3em;
+margin-bottom:.5em;
+padding:.2em;
+}
+
+form{
+border:1px solid #F5BD29;
+width:80%;
+display:flex;
+flex-direction:column;
+gap:.5em;
+padding:.5em;
+color:#FFA500;
+}
+form div{
+width:100%;
+margin:.5em 0;
+padding:.5em;
+}
+
+form div label{
+display:block;
+font-size:1em;
+font-family:Arial;
+margin:.5em;
+font-weight:600;
+}
+form div .input{
+width:100%;
+}
+form input[type="text"],form input[type="password"]
+{
+width:100%;
+border:1px solid gold;
+padding:1em;
+font-weight:600;
+}
+
+form  input[type="submit"]{
+padding:.5em;
+font-weight:600;
+width:50%;
+border-radius:.5em;
+font-family:Arial;
+border: none;
+cursor: pointer;
+font-weight: bold;
+transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+    background-color: #FFA500; /* Darker gold color on hover */
+}

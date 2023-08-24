@@ -48,6 +48,8 @@ margin-right:2em;
 }
 .navbar ul li{
 list-style:none;
+display:flex;
+align-items:center;
 }
 .navbar ul li a{
 text-decoration:none;
@@ -73,6 +75,23 @@ color:var(--secondaryTextColor);
 width:100%;
 transform: translateX(0%);
 }
+.navbar ul li a:active::before{
+width:100%;
+transform: translateX(0%);
+}
+.navbar .signbtn a{
+text-decoration:none;
+color:var(--secondaryTextColor);
+}
+.navbar .signbtn{
+cursor: pointer;
+background-color: var(--black);
+padding:.5em 2em;
+border: 1px solid transparent;
+font-size: 1em;
+border: 1px solid var(--secondaryTextColor);
+}
+
 /* header section styling*/
 .header{
 width:95%;
@@ -111,6 +130,7 @@ width: 200px;
 color: var(--secondaryTextColor);
 border: 1px solid transparent;
 font-size: 1.5em;
+border: 1px solid var(--secondaryTextColor);
 }
 .header .btn:hover{
 border: 1px solid var(--secondaryTextColor);
