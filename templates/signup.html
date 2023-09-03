@@ -1,12 +1,47 @@
 <!doctype html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="{{ url_for('static', filename='./css/base.css') }}"/>
-<title>Crown.com | signUp</title>
-</head>
-<body>
-<div class="container">
-</div>
-</body>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{{ url_for('static', filename='./css/sign.css') }}"/>
+		<title>Crown.com | signUp</title>
+	</head>
+	<body>
+			<div class="container">
+				<h2>SIGN UP</h2>
+				<form action="#" method="POST">
+					{{ signupform.csrf_token }}
+					{% with message = get_flashed_messages() %}
+						{% if massage %}
+							
+								<p style="font-size:5em;"> {{ massage[0] }}</p>
+						
+						{% endif %}
+					{% endwith %}
+				<div>
+					{{ signupform.name.label }}
+					<p class="input">{{ signupform.name() }}</p>
+				</div>
+				<div>
+					{{ signupform.email.label }}
+					<p class="input">{{ signupform.email() }}</p>
+				</div>
+				<div>
+					{{ signupform.phone.label }}
+					<p class="input">{{ signupform.phone() }}</p>
+				</div>
+				<div>
+					{{ signupform.password.label }}
+					<p class="input" >{{ signupform.password() }}</p>
+				</div>
+				<div style="display:flex;justify-content:center;">
+					<input type="submit" value="Sign Up"/>
+				</div>
+				<div>
+					<h5>
+						<a href="{{ url_for('myWebsite.signin') }}">Already have account ?</a>
+					</h5>
+				</div>
+				</form>
+			</div>
+	</body>
 </html>

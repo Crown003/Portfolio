@@ -13,10 +13,13 @@
 		<ul>
 			<li><a href="{{ url_for('myWebsite.home') }}">Home</a></li>
 			<li><a href="{{ url_for('myWebsite.contact') }}">Contact me</a></li>
-			<Button class="signbtn"><a href="{{ url_for('myWebsite.signin') }}">SignIn</a></Button>
+			{% if current_user.is_authenticated %}
+				Hi {{ current_user.username }}!
+				{% else %}
+				<Button class="signbtn"><a href="{{ url_for('myWebsite.signin') }}">SignIn</a></Button>
+			{% endif %}		
 		</ul>
-	</nav>
-	
+	</nav>	
 	{% block body %}
 	{% endblock %}
 	<!--<footer class="footer">

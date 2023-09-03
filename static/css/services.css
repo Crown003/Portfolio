@@ -1,0 +1,64 @@
+.servicesSection{
+width:95%;
+margin:0 auto;
+position:relative;
+top:4em;
+padding-top:1em;
+}
+.servicesHeading{	
+display:flex;
+flex-direction:column;
+padding:1em;
+background:var(--white);
+margin-bottom:1em;
+}
+.servicesHeading h2{
+color:var(--secondaryTextColor);
+font-size:3em;
+text-align:center;
+font-family:var(--headingFont);
+font-weight:700;
+}
+.servicesHeading p{
+font-size:1.5em;
+color:#000;
+padding:1em;
+font-family:Sans-serif;
+font-weight:400;
+}
+
+#services,#why-choose-us{
+background:var(--white);
+padding:.5em 1em;
+margin-bottom:1em;
+}
+#services h2,#why-choose-us h2{
+text-align:left;
+font-family:var(--headFont);
+font-size:3em;
+}
+#services ul , #why-choose-us ul{
+margin:.5em;
+}
+#services ul li,#why-choose-us ul li{
+list-style:none;
+margin-bottom:1em;
+}
+#services ul li h3,#why-choose-us ul li h3{
+color:var(--secondaryTextColor);
+font-family:var(--headFont);
+font-size:1.5em;
+}
+#services ul li h4{
+color:blue;
+font-size:1.5em;
+text-decoration:underline;
+font-family:var(--headFont);
+font-style:bold;
+}
+#services ul li p, #why-choose-us ul li p{
+padding-left:1em;
+font-size:1.4em;
+font-weight:500;
+font-family:var(--paraFont);
+}

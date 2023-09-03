@@ -8,22 +8,22 @@
 	</div>
 	<div class="contactForm">
 		<form class="form" method="post" action="#">
-			{{ form.csrf_token }}
+			{{ contactform.csrf_token }}
 			<div>
-				{{ form.name.label }}
-				<p class="input">{{ form.name() }}</p>
+				{{ contactform.name.label }}
+				<p class="input">{{ contactform.name() }}</p>
 			</div>
 			<div>
-				{{ form.email.label }}
-				<p class="input" >{{ form.email() }}</p>
+				{{ contactform.email.label }}
+				<p class="input" >{{ contactform.email() }}</p>
 			</div>
 			<div>
-				{{ form.message.label }}
-				<p class="input" >{{ form.message() }}</p>
+				{{ contactform.message.label }}
+				<p class="input" >{{ contactform.message() }}</p>
 			</div>
 			<div>
-				{{ form.needSomeService.label }}
-				<p class="input" >{{ form.needSomeService() }}</p>
+				{{ contactform.needSomeService.label }}
+				<p class="input" >{{ contactform.needSomeService() }}</p>
 			</div>
 			<div>
 				<input type="submit" value="Submit"/>

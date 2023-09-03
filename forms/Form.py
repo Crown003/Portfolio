@@ -10,11 +10,11 @@ class contactForm(FlaskForm):
 	needSomeService = BooleanField("Need some service ?")
 
 class signinForm(FlaskForm):
-	username = StringField('Username or Email : ', validators=[InputRequired()])
+	username = StringField('Email : ', validators=[InputRequired()])
 	password = PasswordField("Password : ",validators=[InputRequired()])
 
 class signupForm(FlaskForm):
 	name = StringField('Name : ', validators=[InputRequired()])
 	email = EmailField('Email : ',validators=[InputRequired()])
-	phone = IntegerField("Contact number : ")
+	phone = IntegerField("Phone : ")
 	password = PasswordField("Password : ",validators=[InputRequired()])
