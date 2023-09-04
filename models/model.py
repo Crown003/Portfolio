@@ -1,7 +1,7 @@
 import datetime
 import uuid
 from flask import session, flash
-from tools.security import verify_password_hash,generate_password_hash
+# from tools.security import verify_password_hash,generate_password_hash
 from Databases.Database import Connection
 from flask_login import UserMixin
 
